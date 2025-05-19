@@ -7,20 +7,20 @@ Saya memiliki sebuah database northwind di postgreSQL. <br>
 Saya minta kamu berfokus pada 2 table/entitas dan atributnya sebagai berikut : <br>
 **1. Entitas products.** <br>
 Memiliki atribut dan penjelasannya sebagai berikut : <br>
-- product_id (bigint) sebagai Primary Key. 
+- **product_id** (bigint) sebagai Primary Key. 
 - product_name (character varying (40)).
-- supplier_id (bigint). Foreign key ke tabel suppliers.
+- **supplier_id** (bigint). Foreign key ke tabel suppliers.
 - category_id (bigint). Foreign key ke tabel categories.
 - quantity_per_unit (character varying(20)).
-- unit_price (real). <br>Harga satuan barang.
-- unit_in_stock (bigint). <br>Banyaknya stok barang yang tersedia.
-- unit_in_order (bigint). <br>Banyaknya stok barang yang sedang dipesan toko dari supplier.
-- reorder_level (bigint). <br>Banyaknya stok barang yang tersedia sebagai batas minimal untuk melakukan order/pemesenanan ke supllier. <br>Nantinya, atribut ini digunakan sebagai acuan dalam menentukan kapan toko harus melakukan pemesanan ulang ke supplier.
-- discontinued (integer). <br>Kelanjutan dari suatu barang, apakah akan terus dijual&direstock atau tidak direstock lagi. <br>Jika bernilai 0, maka barang akan terus dijual. <br>Jika bernilai 1, maka barang tidak akan direstock/dibiarkan terjual sampai habis dan tidak dilakukan pemesanan ulang ke supplier.
+- **unit_price** (real). <br>Harga satuan barang.
+- **unit_in_stock** (bigint). <br>Banyaknya stok barang yang tersedia.
+- **unit_in_order** (bigint). <br>Banyaknya stok barang yang sedang dipesan toko dari supplier.
+- **reorder_level** (bigint). <br>Banyaknya stok barang yang tersedia sebagai batas minimal untuk melakukan order/pemesenanan ke supllier. <br>Nantinya, atribut ini digunakan sebagai acuan dalam menentukan kapan toko harus melakukan pemesanan ulang ke supplier.
+- **discontinued** (integer). <br>Kelanjutan dari suatu barang, apakah akan terus dijual&direstock atau tidak direstock lagi. <br>Jika bernilai 0, maka barang akan terus dijual. <br>Jika bernilai 1, maka barang tidak akan direstock/dibiarkan terjual sampai habis dan tidak dilakukan pemesanan ulang ke supplier.
 
-**2. Entitas suppliers.**
+**2. Entitas suppliers.** <br>
 Memiliki atribut dan penjelasannya sebagai berikut :
-- supplier_id (bigint). Sebagai Primary Key.
+- **supplier_id** (bigint). Sebagai Primary Key.
 - company_name (character varying (40)).
 - contact_name (character varying (30)).
 - contact_title (character varying (30)).
