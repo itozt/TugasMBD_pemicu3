@@ -38,7 +38,8 @@ Langkah-Langkah/Alur kerja dari procedure yang kamu buat harus sebagai berikut :
 3. Mengecek apakah barang yang jumlah stoknya ada di bawah batas minimum tadi sudah dilakukan pemesanan ulang atau belum. <br>Cek pada unit_in_order. Jika bukan bernilai 0, artinya barang sudah dilakukan pemesanan ulang dan masih dalam proses pengiriman. Jika bernilai 0, artinya barang belum dilakukan pemesanan ulang dan perlu melakukan pemesenan ulang ke supplier dari barang tersebut (didasarkan dari supplier_id). Lakukan pemesanan ulang barang tersebut dengan jumlah pemesanan 2 kali dari nilai reorder_level.
 <br>
 Buatlah query procedure sesuai dengan tugas yang saya berikan ini.
-``` psql
+
+```
 CREATE OR REPLACE PROCEDURE auto_reorder()
 LANGUAGE plpgsql
 AS $$
