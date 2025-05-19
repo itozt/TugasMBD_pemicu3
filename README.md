@@ -101,6 +101,11 @@ SET
     WHEN 34 THEN 0
     WHEN 35 THEN 0
     ELSE units_on_order
+  END,
+  discontinued = CASE product_id
+    WHEN 33 THEN 1
+    WHEN 34 THEN 1
+    ELSE discontinued
   END
 WHERE product_id IN (30, 31, 32, 33, 34, 35);
 ```
